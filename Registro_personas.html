@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registro personas - Vector de objetos</title>
+    <script type="text/javascript" src="class_Registro_Persona.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+
+</head>
+<body class="bg-secondary">
+    
+    <div class="modal-dialog text-center "   >
+        <div class="modal-content rounded-25 shadow  border-0">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            
+            <h2 class="fw-bold mb-0">Sistema registro de <strong>Personas</strong></h2>
+
+          </div>
+          
+          <div class="modal-body p-5 pt-0 ">
+            
+    
+            <form class="align-items-center">
+                
+                <div class="row mb-3 ">
+
+                    <div class="fil-2">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Nombre    </span>
+                            <input type="text" name="nombre" id="nombre" class="input-group-text    rounded-5">
+                          </div>
+                    </div>
+
+                    <div class="fil-2">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Apellido    </span>
+                            <input type="text" name="apellido" id="apellido" class="input-group-text    rounded-5">
+                          </div>
+                    </div>
+
+                    <div class="fil-2">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Cedula de .I    </span>
+                            <input type="text" name="ci" id="ci" class="input-group-text    rounded-5">
+                          </div>
+                    </div>
+                    
+
+
+
+              <div class="fil-4 center">
+                <h4 class="fs-5 fw-bold mb-2">Guardar</h4>
+                <input class=" mb-2 btn btn-lg rounded-3 btn-info" type="button"  value="Guardar al Final" onclick="objeto.insertarRegistro(1)">
+                <input class=" mb-2 btn btn-lg rounded-3 btn-dark" type="button" value="Guardar al Principio" onclick="objeto.insertarRegistro(0)">
+              </div>
+              <hr class="my-1">
+              
+              <div class="fil-4 center">
+                <h4 class="fs-5 fw-bold mb-3">Eliminar</h4>
+                <input class=" mb-2 btn btn-lg rounded-3 btn-info" type="button" value="Eliminar el ultimo" onclick="objeto.eliminarRegistro(1)">
+                <input class=" mb-2 btn btn-lg rounded-3 btn-dark" type="button" value="Eliminar el primero" onclick="objeto.eliminarRegistro(0)")>
+              </div>
+
+              <hr class="my-1">
+             
+              <div class="fil-2">
+                <h4 class="fs-5 fw-bold mb-3">Ordenar</h4>
+                <input class=" mb-2 btn btn-lg rounded-3 btn-info" type="button" value="Ordenar por Apell." onclick = "objeto.ordenarBurbuja(1)">
+                <input class=" mb-2 btn btn-lg rounded-3 btn-dark" type="button" value="Ordenar por C.I." onclick = "objeto.ordenarBurbuja(0)">
+              </div>
+              <br>  
+
+              
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">Criterio de Busqueda:</span>
+                <input placeholder="Ingresa el Criterio" class="input-group-text  shadow btn-warning   rounded-3" type="text" name="busqueda" id="busqueda">
+              </div>
+              <div class="input-group mb-3">        
+                    <div class="input-group-text"><span>Tipo Busqueda: </span></div>
+                    <div class="">
+                        <select class="form-select" name="tipoBusqueda" id="tipoBusqueda">
+                            <option value="A">Nombre</option>
+                            <option value="B">Apellido</option>
+                            <option value="C">C.I.</option>
+                        </select>
+
+                    </div>
+                    
+                </div>
+                <input class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="button" value="Buscar" onclick="objeto.buscarRegistro()">
+                <span class="center">Univ. Ronaldo Cahuasiri C. | USFX 2022 Laboratorio 4</span>
+              </div>
+                
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <script>
+        var objeto = new Registro_Persona();
+    </script>
+    <script src="js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>
